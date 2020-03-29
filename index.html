@@ -74,10 +74,78 @@
 
 						<!-- Work -->
 							<article id="work">
-								<h2 class="major">Work</h2>
-								<span class="image main"><img src="images/pic02.jpg" alt="" /></span>
-								<p>Adipiscing magna sed dolor elit. Praesent eleifend dignissim arcu, at eleifend sapien imperdiet ac. Aliquam erat volutpat. Praesent urna nisi, fringila lorem et vehicula lacinia quam. Integer sollicitudin mauris nec lorem luctus ultrices.</p>
-								<p>Nullam et orci eu lorem consequat tincidunt vivamus et sagittis libero. Mauris aliquet magna magna sed nunc rhoncus pharetra. Pellentesque condimentum sem. In efficitur ligula tate urna. Maecenas laoreet massa vel lacinia pellentesque lorem ipsum dolor. Nullam et orci eu lorem consequat tincidunt. Vivamus et sagittis libero. Mauris aliquet magna magna sed nunc rhoncus amet feugiat tempus.</p>
+								<!-- <h2 class="major">Servicios</h2> -->
+								<div>
+									<h2 class="major" style="font-size:30px;cursor:pointer;center:marginLeft" onmouseover="openNav()">&#9776;Servicios</h2>
+								</div>
+
+									<div id="mySidenav" class="sidenav">
+
+
+<!-- este boton es para cerrar con una cruz, pero no hace falta. -->
+								  <!-- <a href="javascript:void(0)" class="closebtn" onclick="closeNav()" style.src=>&times;</a> -->
+
+
+								  <!-- <a href="#" style="visibility:hidden">.</a>
+									<a href="#" style="visibility:hidden">.</a> -->
+
+								  <a
+									onclick="closeNav();
+									change_text('Estandarización de recetas','Generar recetas escritas permite ahorrar en mercadería y entregar un producto de calidad sólida. Así como también permite acelerar y mejorar el entrenamiento de personal.');
+									document.getElementById('imagen').src='images/soluciones/recetas.jpg';
+									document.getElementById('estandar').style.display='inherit';
+									document.getElementById('title-estandar').style.display='inherit';
+									"
+									>
+									Recetas</a>
+
+									<a
+									onclick="closeNav();
+									change_text('Análisis de producción del menú','Es importante verificar los espacios de almacenamiento y elaboración como también los horarios reales de producción. ¿Cuento con todo lo que necesito para producir este menú eficientemente para mis clientes?');
+									document.getElementById('imagen').src='images/soluciones/menu.jpg';
+									document.getElementById('estandar').style.display='inherit';
+									document.getElementById('title-estandar').style.display='inherit';
+									"
+									>
+									Menú</a>
+
+									<a
+									onclick="closeNav();
+									change_text('Diseño funcional de cocina','Pensar y preveer los espacios de trabajo de cada zona, puesto, pase de platos, sectores de despacho y almacenamiento, etc. es vital para lograr agilidad y velocidad en el trabajo aprovechando al máximo los recursos involucrados.');
+									document.getElementById('imagen').src='images/bg.jpg';
+									document.getElementById('estandar').style.display='inherit';
+									document.getElementById('title-estandar').style.display='inherit';
+									"
+									>
+									Diseño funcional de cocina</a>
+
+									<a
+									onclick="closeNav();
+									change_text('Circuitos de circulación','La conexión física entre los distintos ambiente de un restaurant estará determinada por la necesidad de circulación de trabajo de camareros, clientes en espera, entradas, salidas, colas de servicio y otras. Diagramar y combinar correctamente estos circuitos en el diseño aumenta las ventas reduciendo los tiempos de traslado, servicio y atención.');
+									document.getElementById('imagen').src='images/bg.jpg';
+									document.getElementById('estandar').style.display='inherit';
+									document.getElementById('title-estandar').style.display='inherit';
+									"
+									>
+									Circuitos de circulación</a>
+
+									<a
+									onclick="closeNav();
+									change_text('Stocks y orden de compra','La creación de planillas útiles específicas hace que se agilice la toma de stock periódico, fijando una base de control elemental y eficaz para reducir costos por pérdidas o mal uso. Las órdenes de compra simples y diseñadas con criterio ayudan a los encargados a controlar las necesidades y asegurar que hay insumos para funcionar de manera correcta.');
+									document.getElementById('imagen').src='images/soluciones/stock.jpg';
+									document.getElementById('estandar').style.display='inherit';
+									document.getElementById('title-estandar').style.display='inherit';
+									"
+									>
+									Stocks</a>
+									</div>
+<!-- side nav animado push content  -->
+						<!-- original -->
+						<!-- <span class="image main"><img src="images/pic02.jpg" alt="" /></span> -->
+
+								<h3 id="titulo" style="display:none;">Estandarización de recetas</h3>
+								<span class="image main"> <img id="imagen" src="images/pic01.jpg"></img> </span>
+								<p class="explicacionsoluciones" id="texto" style="display:none;">
 							</article>
 
 						<!-- About -->
@@ -394,7 +462,31 @@ print 'It took ' + i + ' iterations to sort the deck.';</code></pre>
 					  setTimeout(carousel, 3500); // Change image every 2 seconds
 					}
 			</script>
+			<script>
+			<!-- funciones que muestran y ocultan la barra lateral push mySidenav -->
+			function openNav() {
+			  document.getElementById("mySidenav").style.width = "100%";
+			  document.getElementById("main").style.marginLeft = "0px";
+			}
 
+			function closeNav() {
+			  document.getElementById("mySidenav").style.width = "0";
+			  document.getElementById("main").style.marginLeft= "0";
+			}
+			</script>
+
+			<script>
+						// cambio informacion segun la lista de seleccion de servicios del sidenav
+						function change_text(textotitulo, textotexto){
+						// cambia titulo
+						document.getElementById("titulo").innerHTML = (textotitulo);
+						document.getElementById("titulo").style.display = 'inherit';
+
+						// cambia texto descriptivo
+						document.getElementById("texto").innerHTML = (textotexto);
+						document.getElementById("texto").style.display = 'inherit';
+						}
+			</script>
 
 /* myslides para el carousel que pasa imagenes */
 			<style media="screen">
@@ -420,5 +512,59 @@ print 'It took ' + i + ' iterations to sort the deck.';</code></pre>
 								  to {opacity: 1}
 								}
 		  </style>
+
+
+			<!-- styles para el sidenav de servicios -->
+			<style media="screen">
+			.sidenav {
+			  height: 100%;
+			  width: 0;
+			  position: fixed;
+			  z-index: 1;
+			  top: 0;
+			  left: 0;
+			  background-color: rgba(27, 31, 34, 0.90);
+			  overflow-x: hidden;
+			  transition: 0.5s;
+			  padding-top: 10rem;
+			}
+			.sidenav a {
+			  padding: 8px 8px 8px 8px;
+				padding-left: 40px;
+			  text-decoration: none;
+			  font-size: 25px;
+			  color: white;
+			  display: block;
+			  transition: 0.3s;
+				outline:0;
+				border-style: 0;
+				border-bottom: 0;
+				text-align: marginLeft;
+				text-transform: uppercase;
+				/* letter-spacing: 0.2rem; */
+			}
+
+			.sidenav a:hover {
+					  color: #f1f1f1;
+						background-color: rgba(255, 255, 255, 0.075);
+			}
+
+			.sidenav a:active{
+						background-color: rgba(255, 255, 255, 0.175);
+			}
+
+			.sidenav .closebtn {
+			  position: absolute;
+			  top: 0;
+			  right: 25px;
+			  font-size: 36px;
+			  margin-left: 50px;
+			}
+
+			@media screen and (max-height: 450px) {
+			  .sidenav {padding-top: 15px;}
+			  .sidenav a {font-size: 18px;}
+			}
+			</style>
 	</body>
 </html>
