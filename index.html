@@ -7,7 +7,7 @@
 <html lang="es">
 
 	<head>
-		<title>Dimension by HTML5 UP</title>
+		<title>A. Kakias - Asesor Gastronómico</title>
 		<meta charset="utf-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
 		<link rel="stylesheet" href="assets/css/main.css" />
@@ -61,7 +61,7 @@
 								</span>
 								<p>Alejandro inició su carrera como cocinero en el año 2010, dejando en segundo plano temporalmente su título de Ingeniero.<br>
 
-									Desde hace tres años se dedica a la asesoía gastronómica, en donde la formación metódica previa resurge aportando herramientas de análisis, cálculo y organización que se aplican al asesoramiento enfocándolo con más precisión a al funcionalidad.<br>
+									Desde hace tres años se dedica a la asesoía gastronómica, en donde la formación metódica previa resurge aportando herramientas de análisis, cálculo y organización que se aplican al asesoramiento enfocándolo a la funcionalidad del negocio.<br>
 
 									Se combinan siempre estas disciplinas con su preferencia por conocer distintas culturas y como resultado vivió en varios países, involucrándose en sus hábitos, costumbres y lenguas.<br>
 
@@ -74,83 +74,130 @@
 
 						<!-- Work -->
 							<article id="work">
-								<!-- <h2 class="major">Servicios</h2> -->
-								<div>
-									<h2 class="major" style="font-size:30px;cursor:pointer;center:marginLeft" onmouseover="openNav()">&#9776;Servicios</h2>
-								</div>
+								<h2 class="major">Servicios</h2>
+								<div id="base" class="baselistanav">
+								<a
+								onclick="openNav();
+								change_text('Estandarización de recetas','Generar recetas escritas permite ahorrar en mercadería y entregar un producto de calidad sólida. Así como también permite acelerar y mejorar el entrenamiento de personal.');
+								document.getElementById('imagen').src='images/recetas.jpg';
+								document.getElementById('estandar').style.display='inherit';
+								document.getElementById('title-estandar').style.display='inherit';
+								"
+								>
+								Recetas</a>
+
+								<a
+								onclick="openNav();
+								change_text('Análisis de producción del menú','Es importante verificar los espacios de almacenamiento y elaboración como también los horarios reales de producción. ¿Cuento con todo lo que necesito para producir este menú eficientemente para mis clientes?');
+								document.getElementById('imagen').src='images/menu.jpg';
+								document.getElementById('estandar').style.display='inherit';
+								document.getElementById('title-estandar').style.display='inherit';
+								"
+								>
+								Menú</a>
+
+								<a
+								onclick="openNav();
+								change_text('Diseño funcional de cocina','Pensar y preveer los espacios de trabajo de cada zona, puesto, pase de platos, sectores de despacho y almacenamiento, etc. es vital para lograr agilidad y velocidad en el trabajo aprovechando al máximo los recursos involucrados.');
+								document.getElementById('imagen').src='images/disenio.jpg';
+								document.getElementById('estandar').style.display='inherit';
+								document.getElementById('title-estandar').style.display='inherit';
+								"
+								>
+								Diseño funcional de cocina</a>
+
+								<a
+								onclick="openNav();
+								change_text('Circuitos de circulación','La conexión física entre los distintos ambiente de un restaurant estará determinada por la necesidad de circulación de trabajo de camareros, clientes en espera, entradas, salidas, colas de servicio y otras. Diagramar y combinar correctamente estos circuitos en el diseño aumenta las ventas reduciendo los tiempos de traslado, servicio y atención.');
+								document.getElementById('imagen').src='images/circuitos.jpg';
+								document.getElementById('estandar').style.display='inherit';
+								document.getElementById('title-estandar').style.display='inherit';
+								"
+								>
+								Circuitos de circulación</a>
+
+								<a
+								onclick="openNav();
+								change_text('Stocks y orden de compra','La creación de planillas útiles específicas hace que se agilice la toma de stock periódico, fijando una base de control elemental y eficaz para reducir costos por pérdidas o mal uso. Las órdenes de compra simples y diseñadas con criterio ayudan a los encargados a controlar las necesidades y asegurar que hay insumos para funcionar de manera correcta.');
+								document.getElementById('imagen').src='images/stock.jpg';
+								document.getElementById('estandar').style.display='inherit';
+								document.getElementById('title-estandar').style.display='inherit';
+								"
+								>
+								Stocks</a>
+							</div>
+
+								<!-- codigo para hacer el sidenav opuesto con la base de info y el sidenav para elegir -->
+								<!-- <a
+								onclick="closeNav();
+								change_text('Estandarización de recetas','Generar recetas escritas permite ahorrar en mercadería y entregar un producto de calidad sólida. Así como también permite acelerar y mejorar el entrenamiento de personal.');
+								document.getElementById('imagen').src='images/recetas.jpg';
+								document.getElementById('estandar').style.display='inherit';
+								document.getElementById('title-estandar').style.display='inherit';
+								"
+								>
+								Recetas</a>
+
+								<a
+								onclick="closeNav();
+								change_text('Análisis de producción del menú','Es importante verificar los espacios de almacenamiento y elaboración como también los horarios reales de producción. ¿Cuento con todo lo que necesito para producir este menú eficientemente para mis clientes?');
+								document.getElementById('imagen').src='images/menu.jpg';
+								document.getElementById('estandar').style.display='inherit';
+								document.getElementById('title-estandar').style.display='inherit';
+								"
+								>
+								Menú</a>
+
+								<a
+								onclick="closeNav();
+								change_text('Diseño funcional de cocina','Pensar y preveer los espacios de trabajo de cada zona, puesto, pase de platos, sectores de despacho y almacenamiento, etc. es vital para lograr agilidad y velocidad en el trabajo aprovechando al máximo los recursos involucrados.');
+								document.getElementById('imagen').src='images/disenio.jpg';
+								document.getElementById('estandar').style.display='inherit';
+								document.getElementById('title-estandar').style.display='inherit';
+								"
+								>
+								Diseño funcional de cocina</a>
+
+								<a
+								onclick="closeNav();
+								change_text('Circuitos de circulación','La conexión física entre los distintos ambiente de un restaurant estará determinada por la necesidad de circulación de trabajo de camareros, clientes en espera, entradas, salidas, colas de servicio y otras. Diagramar y combinar correctamente estos circuitos en el diseño aumenta las ventas reduciendo los tiempos de traslado, servicio y atención.');
+								document.getElementById('imagen').src='images/circuitos.jpg';
+								document.getElementById('estandar').style.display='inherit';
+								document.getElementById('title-estandar').style.display='inherit';
+								"
+								>
+								Circuitos de circulación</a>
+
+								<a
+								onclick="closeNav();
+								change_text('Stocks y orden de compra','La creación de planillas útiles específicas hace que se agilice la toma de stock periódico, fijando una base de control elemental y eficaz para reducir costos por pérdidas o mal uso. Las órdenes de compra simples y diseñadas con criterio ayudan a los encargados a controlar las necesidades y asegurar que hay insumos para funcionar de manera correcta.');
+								document.getElementById('imagen').src='images/stock.jpg';
+								document.getElementById('estandar').style.display='inherit';
+								document.getElementById('title-estandar').style.display='inherit';
+								"
+								>
+								Stocks</a> -->
+
 
 									<div id="mySidenav" class="sidenav">
-
-
-<!-- este boton es para cerrar con una cruz, pero no hace falta. -->
-								  <!-- <a href="javascript:void(0)" class="closebtn" onclick="closeNav()" style.src=>&times;</a> -->
-
-
-								  <!-- <a href="#" style="visibility:hidden">.</a>
-									<a href="#" style="visibility:hidden">.</a> -->
-
-								  <a
-									onclick="closeNav();
-									change_text('Estandarización de recetas','Generar recetas escritas permite ahorrar en mercadería y entregar un producto de calidad sólida. Así como también permite acelerar y mejorar el entrenamiento de personal.');
-									document.getElementById('imagen').src='images/recetas.jpg';
-									document.getElementById('estandar').style.display='inherit';
-									document.getElementById('title-estandar').style.display='inherit';
-									"
-									>
-									Recetas</a>
-
-									<a
-									onclick="closeNav();
-									change_text('Análisis de producción del menú','Es importante verificar los espacios de almacenamiento y elaboración como también los horarios reales de producción. ¿Cuento con todo lo que necesito para producir este menú eficientemente para mis clientes?');
-									document.getElementById('imagen').src='images/menu.jpg';
-									document.getElementById('estandar').style.display='inherit';
-									document.getElementById('title-estandar').style.display='inherit';
-									"
-									>
-									Menú</a>
-
-									<a
-									onclick="closeNav();
-									change_text('Diseño funcional de cocina','Pensar y preveer los espacios de trabajo de cada zona, puesto, pase de platos, sectores de despacho y almacenamiento, etc. es vital para lograr agilidad y velocidad en el trabajo aprovechando al máximo los recursos involucrados.');
-									document.getElementById('imagen').src='images/disenio.jpg';
-									document.getElementById('estandar').style.display='inherit';
-									document.getElementById('title-estandar').style.display='inherit';
-									"
-									>
-									Diseño funcional de cocina</a>
-
-									<a
-									onclick="closeNav();
-									change_text('Circuitos de circulación','La conexión física entre los distintos ambiente de un restaurant estará determinada por la necesidad de circulación de trabajo de camareros, clientes en espera, entradas, salidas, colas de servicio y otras. Diagramar y combinar correctamente estos circuitos en el diseño aumenta las ventas reduciendo los tiempos de traslado, servicio y atención.');
-									document.getElementById('imagen').src='images/circuitos.jpg';
-									document.getElementById('estandar').style.display='inherit';
-									document.getElementById('title-estandar').style.display='inherit';
-									"
-									>
-									Circuitos de circulación</a>
-
-									<a
-									onclick="closeNav();
-									change_text('Stocks y orden de compra','La creación de planillas útiles específicas hace que se agilice la toma de stock periódico, fijando una base de control elemental y eficaz para reducir costos por pérdidas o mal uso. Las órdenes de compra simples y diseñadas con criterio ayudan a los encargados a controlar las necesidades y asegurar que hay insumos para funcionar de manera correcta.');
-									document.getElementById('imagen').src='images/stock.jpg';
-									document.getElementById('estandar').style.display='inherit';
-									document.getElementById('title-estandar').style.display='inherit';
-									"
-									>
-									Stocks</a>
+										<p class="major" id="volverservicios" style="font-size:23px;cursor:pointer;text-align:right;padding-right: 20px;visibility:visible;border-bottom: solid 0px;" onmouseover="closeNav();">&#10005;</p>
+										<h3 id="titulo" style="display:none;">Titulo</h3>
+										<span class="image main"> <img id="imagen" src="images/servicios.jpg"></img> </span>
+										<p class="explicacionsoluciones" id="texto" style="display:block;text-align:justify;">El caos necesita ser ordenado, y eso debe realizarse de a partes. Por lo tanto cada asesoramiento dependerá de cuáles son los elementos que más requieren atención. Aquí se mencionan algunos aspectos básicos que son usualmente pasados por alto durante planificación y que son indicadores de la funcionalidad actual de un negocio.<br><br><br><br><br></p>
+										<!-- <a href="javascript:void(0)" class="closebtn" onclick="closeNav()" style.src=>&times;</a> -->
 									</div>
 <!-- side nav animado push content  -->
 						<!-- original -->
 						<!-- <span class="image main"><img src="images/pic02.jpg" alt="" /></span> -->
 
-								<h3 id="titulo" style="display:none;">Titulo</h3>
-								<span class="image main"> <img id="imagen" src="images/servicios.jpg"></img> </span>
-								<p class="explicacionsoluciones" id="texto" style="display:block;text-align:justify;">El caos necesita ser ordenado, y eso debe realizarse de a partes. Por lo tanto cada asesoramiento dependerá de cuáles son los elementos que más requieren atención. Aquí se mencionan algunos aspectos básicos que son usualmente pasados por alto durante planificación y que son indicadores de la funcionalidad actual de un negocio.<br><br><br><br><br></p>
+
 							</article>
 
 						<!-- About -->
 							<article id="about">
-								<h2 class="major">About</h2>
+
+
+								<h2 class="major">Trabajos</h2>
 								<span class="image main"><img src="images/pic03.jpg" alt="" /></span>
 								<p>Lorem ipsum dolor sit amet, consectetur et adipiscing elit. Praesent eleifend dignissim arcu, at eleifend sapien imperdiet ac. Aliquam erat volutpat. Praesent urna nisi, fringila lorem et vehicula lacinia quam. Integer sollicitudin mauris nec lorem luctus ultrices. Aliquam libero et malesuada fames ac ante ipsum primis in faucibus. Cras viverra ligula sit amet ex mollis mattis lorem ipsum dolor sit amet.</p>
 							</article>
@@ -432,7 +479,7 @@ print 'It took ' + i + ' iterations to sort the deck.';</code></pre>
 
 				<!-- Footer -->
 					<footer id="footer">
-						<p class="copyright">&copy; Untitled. Design: <a href="https://html5up.net">HTML5 UP</a>.</p>
+						<p class="copyright">&copy; Alejandro Kakias 2020</p>
 					</footer>
 
 			</div>
@@ -466,12 +513,12 @@ print 'It took ' + i + ' iterations to sort the deck.';</code></pre>
 			<!-- funciones que muestran y ocultan la barra lateral push mySidenav -->
 			function openNav() {
 			  document.getElementById("mySidenav").style.width = "100%";
-			  document.getElementById("main").style.marginLeft = "0px";
+			  document.getElementById("base").style.marginLeft = "0px";
 			}
 
 			function closeNav() {
 			  document.getElementById("mySidenav").style.width = "0";
-			  document.getElementById("main").style.marginLeft= "0";
+			  document.getElementById("base").style.marginLeft= "0";
 			}
 			</script>
 
@@ -517,7 +564,7 @@ print 'It took ' + i + ' iterations to sort the deck.';</code></pre>
 			<!-- styles para el sidenav de servicios -->
 			<style media="screen">
 			.sidenav {
-			  height: 100%;
+			  height: auto;
 			  width: 0;
 			  position: fixed;
 			  z-index: 1;
@@ -526,7 +573,7 @@ print 'It took ' + i + ' iterations to sort the deck.';</code></pre>
 			  background-color: rgba(27, 31, 34, 0.95);
 			  overflow-x: hidden;
 			  transition: 0.5s;
-			  padding-top: 10rem;
+			  padding-top:70px;
 			}
 			.sidenav a {
 			  padding: 8px 8px 8px 8px;
@@ -564,6 +611,59 @@ print 'It took ' + i + ' iterations to sort the deck.';</code></pre>
 			@media screen and (max-height: 450px) {
 			  .sidenav {padding-top: 15px;}
 			  .sidenav a {font-size: 18px;}
+			}
+			</style>
+			<style media="screen">
+			.baselistanav {
+				height: auto%;
+/*
+				width: 100%;
+				position: fixed;
+
+				top: 0;
+				left: 0;
+				background-color: rgba(27, 31, 34, 0.95);
+				padding-top:70px; */
+				/* overflow-x: hidden; */
+				transition: 0.5s;
+			  /* z-index: 1; */
+			}
+			.baselistanav a {
+				padding: 8px 8px 8px 8px;
+				padding-left: 40px;
+				text-decoration: none;
+				font-size: 25px;
+				color: white;
+				display: block;
+				transition: 0.3s;
+				outline:0;
+				border-style: 0;
+				border-bottom: 0;
+				text-align: marginLeft;
+				text-transform: uppercase;
+				/* letter-spacing: 0.2rem; */
+			}
+
+			.baselistanav a:hover {
+						color: #f1f1f1;
+						background-color: rgba(255, 255, 255, 0.075);
+			}
+
+			.baselistanav a:active{
+						background-color: rgba(255, 255, 255, 0.175);
+			}
+
+			.baselistanav .closebtn {
+				position: absolute;
+				top: 0;
+				right: 25px;
+				font-size: 36px;
+				margin-left: 50px;
+			}
+
+			@media screen and (max-height: 450px) {
+				.baselistanav {padding-top: 15px;}
+				.baselistanav a {font-size: 18px;}
 			}
 			</style>
 	</body>
