@@ -119,20 +119,25 @@
 
 								<a
 								onclick="openNav();
+								<!-- cambio titulo y texto del mysidenav usando una funcion -->
 								change_text('Stocks y orden de compra','La creación de planillas útiles específicas hace que se agilice la toma de stock periódico, fijando una base de control elemental y eficaz para reducir costos por pérdidas o mal uso. Las órdenes de compra simples y diseñadas con criterio ayudan a los encargados a controlar las necesidades y asegurar que hay insumos para funcionar de manera correcta.');
 								document.getElementById('imagen').src='images/stock.jpg';
-								document.getElementById('estandar').style.display='inherit';
-								document.getElementById('title-estandar').style.display='inherit';
 								"
 								>
 								Stocks</a>
 							</div>
 
 							<div id="mySidenav" class="sidenav">
+								<!-- boton cruz de cierre -->
 									<p id="volverservicios" style="margin:0 0 0 0;font-size:23px;padding-top:0px;cursor:pointer;text-align:right;padding-right: 20px;border-bottom: solid 0px;" onmouseover="closeNav();">&#10005;</p>
+
+									<!-- titulo del nav -->
 									<h2 id="titulo">Titulo</h2>
+									<!-- imagen del nav -->
 									<span class="image main"><img id="imagen" src="images/servicios.jpg"></img> </span>
-									<p class="explicacionsoluciones" id="texto" style="text-align:justify;">El caos necesita ser ordenado, y eso debe realizarse de a partes. Por lo tanto cada asesoramiento dependerá de cuáles son los elementos que más requieren atención. Aquí se mencionan algunos aspectos básicos que son usualmente pasados por alto durante planificación y que son indicadores de la funcionalidad actual de un negocio.<br><br><br><br><br></p>
+									<!-- texto explicacion del  -->
+									<p class="explicacionsoluciones" id="texto" style="text-align:justify;">
+									El caos necesita ser ordenado, y eso debe realizarse de a partes. Por lo tanto cada asesoramiento dependerá de cuáles son los elementos que más requieren atención. Aquí se mencionan algunos aspectos básicos que son usualmente pasados por alto durante planificación y que son indicadores de la funcionalidad actual de un negocio.<br><br><br><br><br></p>
 									<!-- <a href="javascript:void(0)" class="closebtn" onclick="closeNav()" style.src=>&times;</a> -->
 							</div>
 
@@ -516,12 +521,12 @@ print 'It took ' + i + ' iterations to sort the deck.';</code></pre>
 			<!-- funciones que muestran y ocultan la barra lateral push mySidenav -->
 			function openNav() {
 			  document.getElementById("mySidenav").style.width = "100%";
-			  document.getElementById("base").style.marginLeft = "0px";
+				document.getElementById("mySidenav").style.opacity = 1;
 			}
 
 			function closeNav() {
-			  document.getElementById("mySidenav").style.width = "0";
-			  document.getElementById("base").style.marginLeft= "0";
+			  document.getElementById("mySidenav").style.width = "0%";
+			  document.getElementById("mySidenav").style.opacity = 0;
 			}
 			</script>
 
@@ -575,8 +580,10 @@ print 'It took ' + i + ' iterations to sort the deck.';</code></pre>
 			  left: 0;
 			  background-color: rgba(27, 31, 34, 0.95);
 			  overflow-x: hidden;
-			  transition: 0.5s;
-			  padding-top:40px;
+			  transition: 0.7s;
+				padding: 4.5rem 2.5rem 1.5rem 2.5rem ;
+				border-radius: 4px;
+				opacity: 0;
 				/* margin: 4rem 0 0 0; */
 			}
 
