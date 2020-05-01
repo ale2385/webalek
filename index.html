@@ -74,6 +74,7 @@
 
 						<!-- Work -->
 							<article id="work">
+
 								<h2 class="major">Servicios</h2>
 								<div id="base" class="baselistanav">
 								<a
@@ -125,6 +126,14 @@
 								"
 								>
 								Stocks</a>
+							</div>
+
+							<div id="mySidenav" class="sidenav">
+									<p id="volverservicios" style="margin:0 0 0 0;font-size:23px;padding-top:0px;cursor:pointer;text-align:right;padding-right: 20px;border-bottom: solid 0px;" onmouseover="closeNav();">&#10005;</p>
+									<h2 id="titulo">Titulo</h2>
+									<span class="image main"><img id="imagen" src="images/servicios.jpg"></img> </span>
+									<p class="explicacionsoluciones" id="texto" style="text-align:justify;">El caos necesita ser ordenado, y eso debe realizarse de a partes. Por lo tanto cada asesoramiento dependerá de cuáles son los elementos que más requieren atención. Aquí se mencionan algunos aspectos básicos que son usualmente pasados por alto durante planificación y que son indicadores de la funcionalidad actual de un negocio.<br><br><br><br><br></p>
+									<!-- <a href="javascript:void(0)" class="closebtn" onclick="closeNav()" style.src=>&times;</a> -->
 							</div>
 
 								<!-- codigo para hacer el sidenav opuesto con la base de info y el sidenav para elegir -->
@@ -179,13 +188,7 @@
 								Stocks</a> -->
 
 
-									<div id="mySidenav" class="sidenav">
-										<p class="major" id="volverservicios" style="font-size:23px;cursor:pointer;text-align:right;padding-right: 20px;visibility:visible;border-bottom: solid 0px;" onmouseover="closeNav();">&#10005;</p>
-										<h3 id="titulo" style="display:none;">Titulo</h3>
-										<span class="image main"> <img id="imagen" src="images/servicios.jpg"></img> </span>
-										<p class="explicacionsoluciones" id="texto" style="display:block;text-align:justify;">El caos necesita ser ordenado, y eso debe realizarse de a partes. Por lo tanto cada asesoramiento dependerá de cuáles son los elementos que más requieren atención. Aquí se mencionan algunos aspectos básicos que son usualmente pasados por alto durante planificación y que son indicadores de la funcionalidad actual de un negocio.<br><br><br><br><br></p>
-										<!-- <a href="javascript:void(0)" class="closebtn" onclick="closeNav()" style.src=>&times;</a> -->
-									</div>
+
 <!-- side nav animado push content  -->
 						<!-- original -->
 						<!-- <span class="image main"><img src="images/pic02.jpg" alt="" /></span> -->
@@ -198,7 +201,7 @@
 
 
 								<h2 class="major">Trabajos</h2>
-								<span class="image main"><img src="images/pic03.jpg" alt="" /></span>
+								<span class="image main"><img src="images/alek01.jpg" alt="" /></span>
 								<p>Lorem ipsum dolor sit amet, consectetur et adipiscing elit. Praesent eleifend dignissim arcu, at eleifend sapien imperdiet ac. Aliquam erat volutpat. Praesent urna nisi, fringila lorem et vehicula lacinia quam. Integer sollicitudin mauris nec lorem luctus ultrices. Aliquam libero et malesuada fames ac ante ipsum primis in faucibus. Cras viverra ligula sit amet ex mollis mattis lorem ipsum dolor sit amet.</p>
 							</article>
 
@@ -573,8 +576,54 @@ print 'It took ' + i + ' iterations to sort the deck.';</code></pre>
 			  background-color: rgba(27, 31, 34, 0.95);
 			  overflow-x: hidden;
 			  transition: 0.5s;
-			  padding-top:70px;
+			  padding-top:40px;
+				/* margin: 4rem 0 0 0; */
 			}
+
+			/* .sidenav span{
+				display: block;
+	margin: 2.5rem 0;
+	width: 100%;
+	border-radius: 4px;
+	border: 0;
+	position: relative;
+	line-height: 1.4;
+letter-spacing: 0.5rem;
+padding-left: 40px;
+text-decoration: none;
+font-size: 25px;
+color: white;
+transition: 0.3s;
+outline: 0;
+border-bottom: 0;
+text-transform: uppercase;
+padding: 0;
+-webkit-text-size-adjust: none;
+	} */
+
+			.sidenav span{
+
+
+				padding: 50rem 2.5rem 1.5rem 2.5rem;
+				margin: 2.5rem 0;
+				position: relative;
+				padding: 0;
+				border: 0;
+				width: 560px;
+				/* max-width: 100%; */
+				border-radius: 4px;
+				display: block;
+			}
+
+
+			.sidenav h2 {
+				font-size: 1.5rem;
+				line-height: 1;
+				letter-spacing: 0.5rem;
+				padding-left:40px;
+				padding-top:0px;
+			}
+
 			.sidenav a {
 			  padding: 8px 8px 8px 8px;
 				padding-left: 40px;
@@ -628,6 +677,7 @@ print 'It took ' + i + ' iterations to sort the deck.';</code></pre>
 				transition: 0.5s;
 			  /* z-index: 1; */
 			}
+
 			.baselistanav a {
 				padding: 8px 8px 8px 8px;
 				padding-left: 40px;
