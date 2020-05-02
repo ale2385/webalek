@@ -132,7 +132,7 @@
 									<p id="volverservicios" style="margin:0 0 0 0;font-size:23px;padding-top:0px;cursor:pointer;text-align:right;padding-right: 20px;border-bottom: solid 0px;" onmouseover="closeNav();">&#10005;</p>
 
 									<!-- titulo del nav -->
-									<h2 id="titulo">Titulo</h2>
+									<h2 id="titulo" style="padding: 0 0 0 0;align:center;">Titulo</h2>
 									<!-- imagen del nav -->
 									<span class="image main"><img id="imagen" src="images/servicios.jpg"></img> </span>
 									<!-- texto explicacion del  -->
@@ -169,12 +169,10 @@
 
 								<div id="barraexp" class="sidenav">
 									<!-- boton cruz de cierre -->
-										<p id="volverservicios" style="margin:0 0 0 0;font-size:23px;padding-top:0px;cursor:pointer;text-align:right;padding-right: 20px;border-bottom: solid 0px;" onmouseover="closebarra();">&#10005;</p>
+										<p id="volverservicios" style="margin:0 0 0 0;font-size:23px;padding-top:0px;cursor:pointer;text-align:right;padding-right: 0px;border-bottom: solid 0px;" onmouseover="closebarra();">&#10005;</p>
 
 										<!-- titulo del nav -->
-										<h2 style="text-align:center" id="titulo">Buenos Aires | Argentina</h2>
-
-										<!-- imagen del nav -->
+										<h2 style="text-align:center;margin: 1rem 0 0 0;" id="titulo">Buenos Aires | Argentina</h2>
 										<span class="image main">
 											<span class="row">
 	  										<div class="column">
@@ -187,17 +185,24 @@
 										    <img src="images/pentositu.jpg" alt="Buenos Aires | Argentina" style="width:100%">
 										  	</div>
 											</span>
-										</span>
-										<h2 style="text-align:center" id="titulo">Patagonia | Argentina</h2>
 
-										<!-- imagen del nav -->
-										<span class="image main">
+										<h2 style="text-align:center;" id="titulo2">Patagonia | Argentina</h2>
 											<span class="row">
 												<div class="column">
 												<img src="images/estepa1.jpg" alt="Buenos Aires | Argentina" style="width:100%">
 												</div>
 											</span>
-										</span>
+
+
+										<h2 style="text-align:center;" id="titulo3">Mérida | México</h2>
+											<span class="row">
+												<div class="column">
+												<img src="images/estepa1.jpg" alt="Mérida | México" style="width:100%">
+												</div>
+											</span>
+
+																						</span>
+
 
 										<!-- texto explicacion del  -->
 										<!-- <p class="explicacionsoluciones" id="texto" style="text-align:justify;">
@@ -589,7 +594,7 @@ print 'It took ' + i + ' iterations to sort the deck.';</code></pre>
 			  background-color: rgba(27, 31, 34, 0.95);
 			  overflow-x: scroll;
 			  transition: 0.7s;
-				padding: 4.5rem 2.5rem 1.5rem 2.5rem ;
+				padding: 5rem 2.5rem 1.5rem 2.5rem ;
 				border-radius: 4px;
 				opacity: 0;
 				/* margin: 4rem 0 0 0; */
@@ -739,10 +744,10 @@ padding: 0;
 		}
 
 		.row {
-		  display: flex;
+		  display: table;
 			content: "";
 			clear: both;
-
+			padding-bottom: 5px;
 		}
 
 		/* Create three equal columns that sits next to each other */
