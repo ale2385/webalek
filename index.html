@@ -149,7 +149,7 @@
 								<h2 class="major">Experiencia</h2>
 								<div id="baseexp" class="baselistanav">
 								<a
-								onclick="openbarra();
+								onclick="openamerica();
 								change_text('Estandarización de recetas','Generar recetas escritas permite ahorrar en mercadería y entregar un producto de calidad sólida. Así como también permite acelerar y mejorar el entrenamiento de personal.');
 								document.getElementById('imagen').src='images/recetas.jpg';
 								document.getElementById('estandar').style.display='inherit';
@@ -158,7 +158,7 @@
 								>
 								América</a>
 								<a
-								onclick="openbarra();
+								onclick="openeuropa();
 								change_text('Estandarización de recetas','Generar recetas escritas permite ahorrar en mercadería y entregar un producto de calidad sólida. Así como también permite acelerar y mejorar el entrenamiento de personal.');
 								document.getElementById('imagen').src='images/recetas.jpg';
 								document.getElementById('estandar').style.display='inherit';
@@ -167,13 +167,13 @@
 								>
 								Europa</a>
 							</div>
-								<div id="barraexp" class="sidenav">
+
+								<div id="america" class="sidenav">
 										<!-- boton cruz de cierre -->
-										<p id="volverserviciosexp" style="margin:0 0 0 0;font-size:23px;padding-top:0px;cursor:pointer;text-align:right;padding-right: 0px;border-bottom: solid 0px;" onmouseover="closebarra();">&#10005;</p>
+										<p id="volverserviciosexp" style="margin:0 0 0 0;font-size:23px;padding-top:0px;cursor:pointer;text-align:right;padding-right: 0px;border-bottom: solid 0px;" onmouseover="closeamerica();">&#10005;</p>
 
 										<!-- titulo del nav -->
 										<h2 style="text-align:center;margin: 1rem 0 0 0;" id="titulo1">Buenos Aires | Argentina</h2>
-										<div class="image main">
 											<div class="row">
 	  										<div class="column">
 	    										<img src="images/braavos.jpg" alt="Buenos Aires | Argentina" style="width:100%">
@@ -187,20 +187,47 @@
 											</div>
 
 											<h2 style="text-align:center;margin: 1rem 0 1rem 0;" id="titulo2">Patagonia | Argentina</h2>
-											<div class="row">
-												<div class="column">
-													<img src="images/estepa1.jpg" alt="Buenos Aires | Argentina" style="width:100%">
+												<div class="row">
+													<div class="column">
+													<img src="images/estepa1.jpg" alt="Patagonia | Argentina" style="width:100%">
 												</div>
 											</div>
+
 											<h2 style="text-align:center;margin: 1rem 0 1rem 0;" id="titulo3">Mérida | México</h2>
+												<div class="row">
+													<div class="column">
+													<img src="images/banpesmar.jpg" alt="Mérida | México" style="width:100%" >
+													</div>
+												</div>
+								</div>
+
+								<div id="europa" class="sidenav">
+										<!-- boton cruz de cierre -->
+										<p id="volverserviciosexp" style="margin:0 0 0 0;font-size:23px;padding-top:0px;cursor:pointer;text-align:right;padding-right: 0px;border-bottom: solid 0px;" onmouseover="closeeuropa();">&#10005;</p>
+
+										<!-- titulo del nav -->
+										<h2 style="text-align:center;margin: 1rem 0 0 0;" id="titulo1">Brighton | Inglaterra</h2>
 											<div class="row">
 												<div class="column">
-													<img src="images/estepa1.jpg" alt="Mérida | México" style="width:100%">
+													<img src="images/ginger.jpg" alt="Brighton | Inglaterra" style="width:100%">
+												</div>
+											</div>
+
+
+										<h2 style="text-align:center;margin: 1rem 0 1rem 0;" id="titulo2">Toscana | Italia</h2>
+											<div class="row">
+												<div class="column">
+													<img src="images/villa.jpg" alt="Toscana | Italia" style="width:100%">
+												</div>
+											</div>
+
+										<h2 style="text-align:center;margin: 1rem 0 1rem 0;" id="titulo3">Roma | Italia</h2>
+											<div class="row">
+												<div class="column">
+													<img src="images/grekos.jpg" alt="Roma | Italia" style="width:100%">
 												</div>
 											</div>
 										</div>
-								</div>
-
 							</article>
 
 						<!-- Contact -->
@@ -522,13 +549,21 @@ print 'It took ' + i + ' iterations to sort the deck.';</code></pre>
 			}
 
 // funcion equivalente a opennav pero para manejar barraexp
-			function openbarra() {
-				document.getElementById("barraexp").style.width = "100%";
-				document.getElementById("barraexp").style.opacity = 1;
+			function openamerica() {
+				document.getElementById("america").style.width = "100%";
+				document.getElementById("america").style.opacity = 1;
 			}
-			function closebarra() {
-				document.getElementById("barraexp").style.width = "0%";
-				document.getElementById("barraexp").style.opacity = 0;
+			function closeamerica() {
+				document.getElementById("america").style.width = "0%";
+				document.getElementById("america").style.opacity = 0;
+			}
+			function openeuropa() {
+				document.getElementById("europa").style.width = "100%";
+				document.getElementById("europa").style.opacity = 1;
+			}
+			function closeeuropa() {
+				document.getElementById("europa").style.width = "0%";
+				document.getElementById("europa").style.opacity = 0;
 			}
 			</script>
 
@@ -587,33 +622,9 @@ print 'It took ' + i + ' iterations to sort the deck.';</code></pre>
 				padding: 5rem 2.5rem 1.5rem 2.5rem ;
 				border-radius: 4px;
 				opacity: 0;
-				/* margin: 4rem 0 0 0; */
 			}
 
-			/* .sidenav span{
-				display: block;
-	margin: 2.5rem 0;
-	width: 100%;
-	border-radius: 4px;
-	border: 0;
-	position: relative;
-	line-height: 1.4;
-letter-spacing: 0.5rem;
-padding-left: 40px;
-text-decoration: none;
-font-size: 25px;
-color: white;
-transition: 0.3s;
-outline: 0;
-border-bottom: 0;
-text-transform: uppercase;
-padding: 0;
--webkit-text-size-adjust: none;
-	} */
-
 			.sidenav span{
-
-
 				padding: 50rem 2.5rem 1.5rem 2.5rem;
 				margin: 2.5rem 0;
 				position: relative;
@@ -739,6 +750,8 @@ padding: 0;
 			display: flex;
   		align-items: center;
   		justify-content: center;
+		  background-color: transparent;
+			opacity:1;
 		}
 
 		/* Create three equal columns that sits next to each other */
@@ -746,7 +759,15 @@ padding: 0;
 			width: 33.33%;
 		  padding: 5px;
 			float:;
+			opacity:0.5;
+			display: block;
+			margin: 1rem 0;
+			border-radius: 4px;
 		}
+		.column img{				border-radius: 4px;			}
+		column:hover,
+		.column:hover {
+			opacity: 1;}
 			</style>
 
 	</body>
