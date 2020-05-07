@@ -177,28 +177,35 @@
 											<div class="row">
 	  										<div class="column">
 	    										<img src="images/braavos.jpg" alt="Buenos Aires | Argentina" style="width:100%">
+																										<span class="tooltiptext">Asesor y director de apertura<br> 2016</span>
 	  										</div>
 										  	<div class="column">
 										    	<img src="images/pentosdevoto.jpg" alt="Buenos Aires | Argentina" style="width:100%">
+																										<span class="tooltiptext">Asesor y director de apertura<br> 2017</span>
 										  	</div>
 										  	<div class="column">
 										    	<img src="images/pentositu.jpg" alt="Buenos Aires | Argentina" style="width:100%">
+																										<span class="tooltiptext">Asesor y director de apertura<br> 2017</span>
 										  	</div>
-											</div>
-
-											<h2 style="text-align:center;margin: 1rem 0 1rem 0;" id="titulo2">Patagonia | Argentina</h2>
-												<div class="row">
-													<div class="column">
-													<img src="images/estepa1.jpg" alt="Patagonia | Argentina" style="width:100%">
-												</div>
 											</div>
 
 											<h2 style="text-align:center;margin: 1rem 0 1rem 0;" id="titulo3">Mérida | México</h2>
 												<div class="row">
 													<div class="column">
 													<img src="images/banpesmar.jpg" alt="Mérida | México" style="width:100%" >
+													<span class="tooltiptext">Chef de Partie<br> 2019</span>
 													</div>
 												</div>
+
+											<h2 style="text-align:center;margin: 1rem 0 1rem 0;" id="titulo2">Patagonia | Argentina</h2>
+												<div class="row">
+													<div class="column">
+													<img src="images/estepa1.jpg" alt="Patagonia | Argentina" style="width:100%">
+																										<span class="tooltiptext">Chef de Partie<br> 2016</span>
+												</div>
+											</div>
+
+
 								</div>
 
 								<div id="europa" class="sidenav">
@@ -206,10 +213,11 @@
 										<p id="volverserviciosexp" style="margin:0 0 0 0;font-size:23px;padding-top:0px;cursor:pointer;text-align:right;padding-right: 0px;border-bottom: solid 0px;" onmouseover="closeeuropa();">&#10005;</p>
 
 										<!-- titulo del nav -->
-										<h2 style="text-align:center;margin: 1rem 0 0 0;" id="titulo1">Brighton | Inglaterra</h2>
+										<h2 style="text-align:center;margin: 1rem 0 1rem 0;" id="titulo3">Roma | Italia</h2>
 											<div class="row">
 												<div class="column">
-													<img src="images/ginger.jpg" alt="Brighton | Inglaterra" style="width:100%">
+													<img src="images/grekos.jpg" alt="Roma | Italia" style="width:100%">
+													<span class="tooltiptext">Asesor y director de apertura <br> 2018</span>
 												</div>
 											</div>
 
@@ -218,16 +226,22 @@
 											<div class="row">
 												<div class="column">
 													<img src="images/villa.jpg" alt="Toscana | Italia" style="width:100%">
+													<span class="tooltiptext">Chef<br> 2015</span>
 												</div>
 											</div>
 
-										<h2 style="text-align:center;margin: 1rem 0 1rem 0;" id="titulo3">Roma | Italia</h2>
+										<h2 style="text-align:center;margin: 1rem 0 0 0;" id="titulo1">Brighton | Inglaterra</h2>
 											<div class="row">
 												<div class="column">
-													<img src="images/grekos.jpg" alt="Roma | Italia" style="width:100%">
+													<img src="images/ginger.jpg" alt="Brighton | Inglaterra" style="width:100%">
+													<span class="tooltiptext">Chef de Partie<br> 2014</span>
 												</div>
 											</div>
-										</div>
+
+								</div>
+
+
+
 							</article>
 
 						<!-- Contact -->
@@ -636,12 +650,11 @@ print 'It took ' + i + ' iterations to sort the deck.';</code></pre>
 				display: block;
 			}
 
-
 			.sidenav h2 {
 				font-size: 1.5rem;
 				line-height: 1;
 				letter-spacing: 0.5rem;
-				padding-left:40px;
+				/* padding-left:40px; */
 				padding-top:0px;
 			}
 
@@ -757,17 +770,46 @@ print 'It took ' + i + ' iterations to sort the deck.';</code></pre>
 		/* Create three equal columns that sits next to each other */
 		.column {
 			width: 33.33%;
-		  padding: 5px;
+		  padding: 0.4rem;
 			float:;
 			opacity:0.5;
-			display: block;
-			margin: 1rem 0;
-			border-radius: 4px;
+		  display: inline-block;
+			border-radius: 0.4rem;
+			position:relative;
+			overflow: hidden;
+			text-align: center;
 		}
-		.column img{				border-radius: 4px;			}
+		.column img{				border-radius: 0.4rem;			}
 		column:hover,
 		.column:hover {
 			opacity: 1;}
+
+			/* tooltip cartel texto descripcion experiencias */
+
+		.column .tooltiptext {
+			position: absolute;
+			margin: 0 0 0 0;
+		  visibility: hidden;
+		  color: #ffff;
+		  text-align: center;
+		  border-radius: 0.4rem;
+		  padding:0.4rem;
+			text-transform: uppercase;
+			background-color: rgba(27, 31, 34, 0.98);
+		  /* Fade in tooltip - takes 1 second to go from 0% to 100% opac: */
+		  opacity: 0;
+		  transition: opacity 1s;
+			top: 50%;
+			left: 50%;
+			transform: translate(-50%, -50%);
+		}
+		.column span{
+		width:80%;
+}
+		.column:hover .tooltiptext {
+		  visibility: visible;
+		  opacity: 1;
+		}
 			</style>
 
 	</body>
