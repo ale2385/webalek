@@ -35,7 +35,7 @@
 						<nav>
 							<ul>
 								<li><a href="#intro">Bio</a></li>
-								<li><a href="#work">Servicios</a></li>
+								<li><a href="#work">Asesoría</a></li>
 								<li><a href="#about">Experiencia</a></li>
 								<li><a href="#contact">Contacto</a></li>
 								<!--<li><a href="#elements">Elements</a></li>-->
@@ -75,8 +75,13 @@
 						<!-- Work -->
 							<article id="work">
 
-								<h2 class="major">Servicios</h2>
-								<div id="base" class="baselistanav">
+								<h2 class="major">Asesoría</h2>
+								<div id="menuasesoria" class="baselistanav" style="visibility:visible;">
+									<a onclick="openNav();"> Cómo trabajo?</a>
+									<a onclick="showbase();"> Soluciones</a>
+								</div>
+
+								<div id="base" class="baselistanav lis">
 								<a
 								onclick="openNav();
 								change_text('Estandarización de recetas','Generar recetas escritas permite ahorrar en mercadería y entregar un producto de calidad sólida. Así como también permite acelerar y mejorar el entrenamiento de personal.');
@@ -127,9 +132,9 @@
 								Stocks</a>
 							</div>
 
-							<div id="mySidenav" class="sidenav">
+							<div id="mySidenav" class="sidenav" onclick="closeNav();">
 								<!-- boton cruz de cierre -->
-									<p id="volverservicios" style="margin:0 0 0 0;font-size:23px;padding-top:0px;cursor:pointer;text-align:right;padding-right: 20px;border-bottom: solid 0px;" onmouseover="closeNav();">&#10005;</p>
+									<!-- <p id="volverservicios" style="margin:0 0 0 0;font-size:23px;padding-top:0px;cursor:pointer;text-align:right;padding-right: 20px;border-bottom: solid 0px;" onmouseover="closeNav();">&#10005;</p> -->
 
 									<!-- titulo del nav -->
 									<h2 id="titulo" style="padding: 0 0 0 0;align:center;">Titulo</h2>
@@ -147,45 +152,29 @@
 							<article id="about">
 
 								<h2 class="major">Experiencia</h2>
-								<div id="baseexp" class="baselistanav">
-								<a
-								onclick="openamerica();
-								change_text('Estandarización de recetas','Generar recetas escritas permite ahorrar en mercadería y entregar un producto de calidad sólida. Así como también permite acelerar y mejorar el entrenamiento de personal.');
-								document.getElementById('imagen').src='images/recetas.jpg';
-								document.getElementById('estandar').style.display='inherit';
-								document.getElementById('title-estandar').style.display='inherit';
-								"
-								>
-								América</a>
-								<a
-								onclick="openeuropa();
-								change_text('Estandarización de recetas','Generar recetas escritas permite ahorrar en mercadería y entregar un producto de calidad sólida. Así como también permite acelerar y mejorar el entrenamiento de personal.');
-								document.getElementById('imagen').src='images/recetas.jpg';
-								document.getElementById('estandar').style.display='inherit';
-								document.getElementById('title-estandar').style.display='inherit';
-								"
-								>
-								Europa</a>
-							</div>
+								<div id="baseexp" class="baselistanav" style="visibility:visible;">
+									<a onclick="openamerica();">América</a>
+									<a onclick="openeuropa();">Europa</a>
+								</div>
 
-								<div id="america" class="sidenav">
+								<div id="america" class="sidenav exp">
 										<!-- boton cruz de cierre -->
-										<p id="volverserviciosexp" style="margin:0 0 0 0;font-size:23px;padding-top:0px;cursor:pointer;text-align:right;padding-right: 0px;border-bottom: solid 0px;" onmouseover="closeamerica();">&#10005;</p>
+										<p id="volverserviciosexp" style="margin:0 0 0 0;font-size:23px;padding-top:0px;cursor:pointer;text-align:right;padding-right: 0px;border-bottom: solid 0px;" onclick="openamerica();">&#10005;</p>
 
 										<!-- titulo del nav -->
 										<h2 style="text-align:center;margin: 1rem 0 0 0;" id="titulo1">Buenos Aires | Argentina</h2>
 											<div class="row">
 	  										<div class="column">
 	    										<img src="images/braavos.jpg" alt="Buenos Aires | Argentina" style="width:100%">
-																										<span class="tooltiptext">Asesor y director de apertura<br> 2016</span>
+													<span class="tooltiptext">Asesor y director de apertura<br> 2016</span>
 	  										</div>
 										  	<div class="column">
 										    	<img src="images/pentosdevoto.jpg" alt="Buenos Aires | Argentina" style="width:100%">
-																										<span class="tooltiptext">Asesor y director de apertura<br> 2017</span>
+													<span class="tooltiptext">Asesor y director de apertura<br> 2017</span>
 										  	</div>
 										  	<div class="column">
 										    	<img src="images/pentositu.jpg" alt="Buenos Aires | Argentina" style="width:100%">
-																										<span class="tooltiptext">Asesor y director de apertura<br> 2017</span>
+												  <span class="tooltiptext">Asesor y director de apertura<br> 2017</span>
 										  	</div>
 											</div>
 
@@ -208,9 +197,9 @@
 
 								</div>
 
-								<div id="europa" class="sidenav">
+								<div id="europa" class="sidenav exp">
 										<!-- boton cruz de cierre -->
-										<p id="volverserviciosexp" style="margin:0 0 0 0;font-size:23px;padding-top:0px;cursor:pointer;text-align:right;padding-right: 0px;border-bottom: solid 0px;" onmouseover="closeeuropa();">&#10005;</p>
+										<p id="volverserviciosexp" style="margin:0 0 0 0;font-size:23px;padding-top:0px;cursor:pointer;text-align:right;padding-right: 0px;border-bottom: solid 0px;" onclick="openeuropa();">&#10005;</p>
 
 										<!-- titulo del nav -->
 										<h2 style="text-align:center;margin: 1rem 0 1rem 0;" id="titulo3">Roma | Italia</h2>
@@ -554,31 +543,53 @@ print 'It took ' + i + ' iterations to sort the deck.';</code></pre>
 			<script>
 			<!-- funciones que muestran y ocultan la barra lateral push mySidenav -->
 			function openNav() {
-				document.getElementById("mySidenav").style.width = "100%";
 			  document.getElementById("mySidenav").style.opacity = 1;
+				document.getElementById("mySidenav").style.visibility = "visible";
 			}
 			function closeNav() {
-			  document.getElementById("mySidenav").style.width = "0%";
+				// document.getElementById("mySidenav").style.transition.delay = "1.2";
 			  document.getElementById("mySidenav").style.opacity = 0;
+				document.getElementById("mySidenav").style.visibility = "hidden";
+			}
+
+			function showbase() {
+				var x = document.getElementById("base");
+				x.style.opacity = 1;
+				x.style.visibility = "visible";
+				if (x.style.display == "block") {
+					x.style.display = "none";
+					} else {
+						x.style.display = "block";
+					}
 			}
 
 // funcion equivalente a opennav pero para manejar barraexp
-			function openamerica() {
-				document.getElementById("america").style.width = "100%";
-				document.getElementById("america").style.opacity = 1;
+
+function openamerica() {
+	var x = document.getElementById("america");
+	if (x.style.display == "block") {
+		x.style.display = "none";
+		x.style.opacity = 0;
+		x.style.visibility = "hidden";
+		} else {
+			x.style.display = "block";
+			x.style.opacity = 1;
+			x.style.visibility = "visible";
+		}
+	}
+
+	function openeuropa() {
+		var x = document.getElementById("europa");
+		if (x.style.display == "block") {
+			x.style.display = "none";
+			x.style.opacity = 0;
+			x.style.visibility = "hidden";
+			} else {
+				x.style.display = "block";
+				x.style.opacity = 1;
+				x.style.visibility = "visible";
 			}
-			function closeamerica() {
-				document.getElementById("america").style.width = "0%";
-				document.getElementById("america").style.opacity = 0;
-			}
-			function openeuropa() {
-				document.getElementById("europa").style.width = "100%";
-				document.getElementById("europa").style.opacity = 1;
-			}
-			function closeeuropa() {
-				document.getElementById("europa").style.width = "0%";
-				document.getElementById("europa").style.opacity = 0;
-			}
+		}
 			</script>
 
 
@@ -625,26 +636,27 @@ print 'It took ' + i + ' iterations to sort the deck.';</code></pre>
 			<style media="screen">
 			.sidenav {
 			  height: auto;
-			  width: 0;
+			  width: 100%;
 			  position: fixed;
 			  z-index: 1;
 			  top: 0;
 			  left: 0;
 			  background-color: rgba(27, 31, 34, 0.95);
-			  overflow-x: scroll;
-			  transition: 0.7s;
+			  overflow-x: hidden;
+				transition:opacity 1.2s linear;
+				transition-timing-function: ease-in-out;
 				padding: 5rem 2.5rem 1.5rem 2.5rem ;
 				border-radius: 4px;
 				opacity: 0;
+				visibility: hidden;
 			}
 
 			.sidenav span{
-				padding: 50rem 2.5rem 1.5rem 2.5rem;
 				margin: 2.5rem 0;
 				position: relative;
 				padding: 0;
 				border: 0;
-				width: 560px;
+				width: 100%;
 				/* max-width: 100%; */
 				border-radius: 4px;
 				display: block;
@@ -656,6 +668,7 @@ print 'It took ' + i + ' iterations to sort the deck.';</code></pre>
 				letter-spacing: 0.5rem;
 				/* padding-left:40px; */
 				padding-top:0px;
+				text-align: center;
 			}
 
 			.sidenav a {
@@ -669,7 +682,7 @@ print 'It took ' + i + ' iterations to sort the deck.';</code></pre>
 				outline:0;
 				border-style: 0;
 				border-bottom: 0;
-				text-align: marginLeft;
+				text-align: left;
 				text-transform: uppercase;
 				/* letter-spacing: 0.2rem; */
 			}
@@ -677,10 +690,6 @@ print 'It took ' + i + ' iterations to sort the deck.';</code></pre>
 			.sidenav a:hover {
 					  color: #f1f1f1;
 						background-color: rgba(255, 255, 255, 0.075);
-			}
-
-			.sidenav a:active{
-						background-color: rgba(255, 255, 255, 0.175);
 			}
 
 			.sidenav .closebtn {
@@ -708,22 +717,31 @@ print 'It took ' + i + ' iterations to sort the deck.';</code></pre>
 				background-color: rgba(27, 31, 34, 0.95);
 				padding-top:70px; */
 				/* overflow-x: hidden; */
-				transition: 0.5s;
+				transition:opacity 1.2s linear;
+				transition-timing-function: ease-in-out;
+				visibility: hidden;
+				text-align: left;
 			  /* z-index: 1; */
 			}
 
+			.baselistanav.lis {
+				text-align: center;
+				display: none;
+				opacity: 0;
+			}
+
 			.baselistanav a {
-				padding: 8px 8px 8px 8px;
-				padding-left: 40px;
+				padding: 0.5rem;
+				padding-left: 0px;
 				text-decoration: none;
-				font-size: 25px;
+				font-size: 1.125rem;
 				color: white;
 				display: block;
 				transition: 0.3s;
 				outline:0;
 				border-style: 0;
 				border-bottom: 0;
-				text-align: marginLeft;
+
 				text-transform: uppercase;
 				/* letter-spacing: 0.2rem; */
 			}
@@ -740,14 +758,14 @@ print 'It took ' + i + ' iterations to sort the deck.';</code></pre>
 			.baselistanav .closebtn {
 				position: absolute;
 				top: 0;
-				right: 25px;
-				font-size: 36px;
-				margin-left: 50px;
+				right: 1.563rem;
+				font-size: 2.25rem;
+				margin-left: 3.125rem;
 			}
 
 			@media screen and (max-height: 450px) {
-				.baselistanav {padding-top: 15px;}
-				.baselistanav a {font-size: 18px;}
+				.baselistanav {padding-top: 0.938rem;}
+				.baselistanav a {font-size: 1.125rem;}
 			}
 			</style>
 
@@ -762,7 +780,7 @@ print 'It took ' + i + ' iterations to sort the deck.';</code></pre>
 			clear: both;
 			display: flex;
   		align-items: center;
-  		justify-content: center;
+  		justify-content: space-around;
 		  background-color: transparent;
 			opacity:1;
 		}
@@ -774,12 +792,12 @@ print 'It took ' + i + ' iterations to sort the deck.';</code></pre>
 			float:;
 			opacity:0.5;
 		  display: inline-block;
-			border-radius: 0.4rem;
+			border-radius: 4px;
 			position:relative;
 			overflow: hidden;
 			text-align: center;
 		}
-		.column img{				border-radius: 0.4rem;			}
+		.column img{				border-radius: 4px;			}
 		column:hover,
 		.column:hover {
 			opacity: 1;}
@@ -792,7 +810,7 @@ print 'It took ' + i + ' iterations to sort the deck.';</code></pre>
 		  visibility: hidden;
 		  color: #ffff;
 		  text-align: center;
-		  border-radius: 0.4rem;
+		  border-radius: 4px;
 		  padding:0.4rem;
 			text-transform: uppercase;
 			background-color: rgba(27, 31, 34, 0.98);
