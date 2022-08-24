@@ -157,7 +157,7 @@
 							</article>
 
 						<!-- About -->
-							<article id="about">
+							<article id="about" style="height: auto;">
 
 								<h2 class="major">Experiencia</h2>
 								<div id="baseexp" class="baselistanav" style="visibility:visible;">
@@ -165,9 +165,9 @@
 									<a onclick="openamerica();">Cocinando</a>
 								</div>
 
-								<div id="america" class="sidenav exp">
+								<div id="america" class="major" style="display:none;visibility:hidden;">
 										<!-- boton cruz de cisidenaverre -->
-										<p id="volverserviciosexp" style="margin:0 0 0 0;font-size:23px;padding-top:0px;cursor:pointer;text-align:right;padding-right: 0px;border-bottom: solid 0px;" onclick="openamerica();">&#10005;</p>
+										<!-- <p id="volverserviciosexp" style="margin:0 0 0 0;font-size:23px;padding-top:0px;cursor:pointer;text-align:right;padding-right: 0px;border-bottom: solid 0px;" onclick="openamerica();">&#10005;</p> -->
 
 										<!-- titulo del nav -->
 										<!-- <h2 style="text-align:center;margin: 1rem 0 0 0;" id="titulo1">Buenos Aires | Argentina</h2>
@@ -221,9 +221,9 @@
 
 								</div>
 
-								<div id="europa" class="sidenav exp">
+								<div id="europa" class="major" style="visibility:hidden; display:none;">
 										<!-- boton cruz de cierre -->
-										<p id="volverserviciosexp" style="margin:0 0 0 0;font-size:23px;padding-top:0px;cursor:pointer;text-align:right;padding-right: 0px;border-bottom: solid 0px;" onclick="openeuropa();">&#10005;</p>
+										<!-- <p id="volverserviciosexp" style="margin:0 0 0 0;font-size:23px;padding-top:0px;cursor:pointer;text-align:right;padding-right: 0px;border-bottom: solid 0px;" onclick="openeuropa();">&#10005;</p> -->
 
 										<!-- titulo del nav -->
 										<h2 style="text-align:center;margin: 1rem 0 0 0;" id="titulo1">Buenos Aires | Argentina</h2>
@@ -629,30 +629,54 @@ print 'It took ' + i + ' iterations to sort the deck.';</code></pre>
 // funcion equivalente a opennav pero para manejar barraexp
 
 function openamerica() {
-	var x = document.getElementById("america");
-	if (x.style.display == "block") {
-		x.style.display = "none";
-		x.style.opacity = 0;
-		x.style.visibility = "hidden";
+	var a = document.getElementById("america");
+	var e = document.getElementById("europa");
+	e.style.display = "none";
+	e.style.opacity = 0;
+	e.style.visibility = "hidden";
+	if (a.style.display == "block") {
+		a.style.display = "none";
+		a.style.opacity = 0;
+		a.style.visibility = "hidden";
 		} else {
-			x.style.display = "block";
-			x.style.opacity = 1;
-			x.style.visibility = "visible";
+			a.style.display = "block";
+			a.style.opacity = 1;
+			a.style.visibility = "visible";
 		}
+
 	}
 
 	function openeuropa() {
-		var x = document.getElementById("europa");
-		if (x.style.display == "block") {
-			x.style.display = "none";
-			x.style.opacity = 0;
-			x.style.visibility = "hidden";
+		var a = document.getElementById("europa");
+		var e = document.getElementById("america");
+		e.style.display = "none";
+		e.style.opacity = 0;
+		e.style.visibility = "hidden";
+		if (a.style.display == "block") {
+			a.style.display = "none";
+			a.style.opacity = 0;
+			a.style.visibility = "hidden";
 			} else {
-				x.style.display = "block";
-				x.style.opacity = 1;
-				x.style.visibility = "visible";
+				a.style.display = "block";
+				a.style.opacity = 1;
+				a.style.visibility = "visible";
 			}
+
 		}
+
+	//
+	// function openeuropa() {
+	// 	var x = document.getElementById("europa");
+	// 	if (x.style.display == "block") {
+	// 		x.style.display = "none";
+	// 		x.style.opacity = 0;
+	// 		x.style.visibility = "hidden";
+	// 		} else {
+	// 			x.style.display = "block";
+	// 			x.style.opacity = 1;
+	// 			x.style.visibility = "visible";
+	// 		}
+	// 	}
 			</script>
 
 
@@ -700,7 +724,7 @@ function openamerica() {
 			.sidenav {
 			  height: auto;
 			  width: 100%;
-				position:fixed;
+				/* position:initial; */
 			  z-index: 1;
 			  top: 0;
 			  left: 0;
@@ -763,7 +787,7 @@ function openamerica() {
 			  margin-left: 50px;
 			}
 
-			@media screen and (max-height: 450px) {
+			@media screen and (max-height: 1450px) {
 			  .sidenav {padding-top: 15px;}
 			  .sidenav a {font-size: 18px;}
 			}
